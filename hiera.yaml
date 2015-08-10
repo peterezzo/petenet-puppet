@@ -1,0 +1,11 @@
+---
+:backends:
+    - yaml
+:yaml:
+    :datadir: /etc/puppet/hieradata
+:hierarchy:
+    - "node/%{::fqdn}"
+    - "hostgroup/%{::hostgroup}"
+    - "virtual/%{::virtual}"
+    - "os/%{::operatingsystem}"
+    - common

@@ -1,0 +1,18 @@
+---
+classes:
+    - apt
+    - apt::unattended_upgrades
+
+apt::apt_update_frequency: daily
+apt::unattended_upgrades::auto_reboot: true
+
+base::os_added_packages:
+    - puppet
+    - augeas-tools
+    - screen
+    - traceroute
+    - git
+
+base::os_removed_packages:
+    - resolvconf
+    - popularity-contest

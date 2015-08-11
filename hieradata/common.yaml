@@ -1,0 +1,8 @@
+---
+classes:
+    - base
+    - ntp
+
+ntp::servers:
+    - time.apple.com
+ntp::iburst_enable: false

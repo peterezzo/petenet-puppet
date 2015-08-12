@@ -1,0 +1,9 @@
+---
+classes:
+    - git
+
+git::configs:
+    user.name:
+        value: 'Peter Ezzo'
+    user.email:
+        value: 'peter.ezzo@gmail.com'

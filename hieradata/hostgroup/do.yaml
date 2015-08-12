@@ -1,0 +1,8 @@
+---
+classes:
+    - ssh
+
+ssh::sshd_config:
+    ChallengeResponseAuthentication:
+        ensure: present
+        value:  'yes'

@@ -7,3 +7,5 @@ git::configs:
         value: 'Peter Ezzo'
     user.email:
         value: 'peter.ezzo@gmail.com'
+    push.default:
+        value: 'simple'

@@ -5,4 +5,7 @@ classes:
 ssh::sshd_config:
     ChallengeResponseAuthentication:
         ensure: present
-        value:  'yes'
+        value:  'no'
+    PasswordAuthentication:
+        ensure: present
+        value:  'no'

@@ -1,8 +1,16 @@
 ---
 classes:
-    - base
     - ntp
+    - ssh
 
 ntp::servers:
     - time.apple.com
 ntp::iburst_enable: false
+
+ssh::sshd_config:
+    Protocol:
+        ensure: present
+        value:  '2'
+    UsePAM:
+        ensure: present
+        value:  'yes'

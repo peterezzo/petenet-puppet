@@ -2,6 +2,7 @@
 classes:
     - ntp
     - ssh
+    - base
 
 ntp::servers:
     - time.apple.com

@@ -4,13 +4,17 @@ classes:
 
 apt::update:frequency: daily
 
-base::os_added_packages:
-    - puppet
-    - augeas-tools
-    - screen
-    - traceroute
-    - git
+base::packages:
+    puppet: {}
+    augeas-tools: {}
+    screen: {}
+    traceroute: {}
+    mtr: {}
+    resolvconf:
+       ensure: 'purged'
+    popularity-contest:
+       ensure: 'purged'
 
-base::os_removed_packages:
-    - resolvconf
-    - popularity-contest
+base::files:
+    '/etc/update-motd.d/10-help-text':
+        ensure: 'absent'

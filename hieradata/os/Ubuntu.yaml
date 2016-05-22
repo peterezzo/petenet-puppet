@@ -1,16 +1,16 @@
 ---
 classes:
-    - apt
+  - apt
 
 apt::update:frequency: daily
 
 base::packages:
-    augeas-tools: {}
-    resolvconf:
-       ensure: 'purged'
-    popularity-contest:
-       ensure: 'purged'
+  vim: {}
+  resolvconf:
+    ensure: 'purged'
+  popularity-contest:
+    ensure: 'purged'
 
 base::files:
-    '/etc/update-motd.d/10-help-text':
-        ensure: 'absent'
+  '/etc/update-motd.d/10-help-text':
+    ensure: 'absent'

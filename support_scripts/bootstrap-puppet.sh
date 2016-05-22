@@ -16,3 +16,17 @@ elif [[ -e /etc/debian_version ]]; then
 else
     echo "Unsupported release detected"
 fi
+
+if [[ `which puppet` ]]; then
+    puppet module install puppetlabs-stdlib
+    puppet module install puppetlabs-apt
+    puppet module install puppetlabs-git
+    puppet module install puppetlabs-ntp
+    puppet module install herculesteam-augeasproviders_ssh
+    puppet module install herculesteam-augeasproviders_shellvar
+    puppet module install herculesteam-augeasproviders_pam
+    puppet module install herculesteam-augeasproviders_puppet
+else
+    echo "Could not install puppet modules"
+    exit 1
+fi

@@ -6,7 +6,6 @@ classes:
 
 base::packages:
   puppet: {}
-  vim: {}
   screen: {}
   traceroute: {}
   mtr: {}

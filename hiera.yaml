@@ -5,6 +5,7 @@
     :datadir: /etc/puppet/hieradata
 :hierarchy:
     - "node/%{::fqdn}"
+    - "role/%{::role}"
     - "hostgroup/%{::hostgroup}"
     - "virtual/%{::virtual}"
     - "os/%{::operatingsystem}"

@@ -5,12 +5,7 @@ classes:
 apt::update:frequency: daily
 
 base::packages:
-    puppet: {}
     augeas-tools: {}
-    vim: {}
-    screen: {}
-    traceroute: {}
-    mtr: {}
     resolvconf:
        ensure: 'purged'
     popularity-contest:

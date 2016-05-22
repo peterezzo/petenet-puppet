@@ -1,17 +1,24 @@
 ---
 classes:
-    - ntp
-    - ssh
-    - base
+  - ntp
+  - ssh
+  - base
+
+base::packages:
+  puppet: {}
+  vim: {}
+  screen: {}
+  traceroute: {}
+  mtr: {}
 
 ntp::servers:
-    - time.apple.com
+  - time.apple.com
 ntp::iburst_enable: false
 
 ssh::sshd_config:
-    Protocol:
-        ensure: present
-        value:  '2'
-    UsePAM:
-        ensure: present
-        value:  'yes'
+  Protocol:
+    ensure: present
+    value:  '2'
+  UsePAM:
+    ensure: present
+    value:  'yes'

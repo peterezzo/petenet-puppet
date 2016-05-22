@@ -1,0 +1,7 @@
+---
+base::packages:
+  gcc: {}
+  nmap: {}
+
+classes:
+  - git

@@ -1,3 +1,5 @@
 ---
 base::packages:
   vim-enhanced: {}
+
+base::sudo_env_keep: true

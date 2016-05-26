@@ -14,3 +14,5 @@ base::packages:
 base::files:
   '/etc/update-motd.d/10-help-text':
     ensure: 'absent'
+
+base::sudo_env_keep: true

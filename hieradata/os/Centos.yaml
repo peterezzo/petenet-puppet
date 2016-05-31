@@ -3,7 +3,3 @@ base::packages:
   vim-enhanced: {}
 
 base::sudo_env_keep: true
-
-base::users:
-  pete:
-    groups: [ 'adm', 'wheel', 'systemd-journal', ]

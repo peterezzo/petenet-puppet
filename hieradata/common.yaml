@@ -21,3 +21,9 @@ ssh::sshd_config:
   UsePAM:
     ensure: present
     value:  'yes'
+
+base::users:
+  pete: {
+    managehome: true,
+    password: '$6$s19uRMck$DieuvS49Wt0dWKqInyn6ZfRfMCiNApEi1lXB4T/Wu2L6YN1vLLKe2f9mLS09UK0ClLD2VU5yn3NJel2GVBMmk',
+  }

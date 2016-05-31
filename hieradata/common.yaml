@@ -3,6 +3,7 @@ classes:
   - ntp
   - ssh
   - base
+  - base::admin_user
 
 base::packages:
   puppet: {}
@@ -22,8 +23,7 @@ ssh::sshd_config:
     ensure: present
     value:  'yes'
 
-base::users:
-  pete: {
-    managehome: true,
-    password: '$6$s19uRMck$DieuvS49Wt0dWKqInyn6ZfRfMCiNApEi1lXB4T/Wu2L6YN1vLLKe2f9mLS09UK0ClLD2VU5yn3NJel2GVBMmk',
-  }
+
+base::admin_user::username: 'pete'
+base::admin_user::password: '$6$s19uRMck$DieuvS49Wt0dWKqInyn6ZfRfMCiNApEi1lXB4T/Wu2L6YN1vLLKe2f9mLS09UK0ClLD2VU5yn3NJel2GVBMmk'
+base::admin_user::ssh-key: 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCGTAkFHoRHlOpTaqftVosB/gxFTDfZVpERW1c/dTPybJO18WDLylL6vvkgPof0i9Dnho2ukjYgESPLMs6MJW3pAs7jXzgoKAJpwYCjCe254u/uwTljn1RK1W00rWNkMgpa7nRsKV/l/NAWohb1pj52PaHVZTZgJuuvOhjuVVcHn5dYgJNxTJpxEh6vJwETphQvYR0ltXldJ79a/5e/+ReFU3oTbooI9jmxC8uzDPh8By1xJKpjrfoMJ+zRPFJl+fTR5cdaSSk8oOrQCsmJdOgEds4xF/ZqMXXgQvspgCRnnK3Lugc2xxUYmOvpY9M8bHn1MLNbRHtsXfMO+ztk0At5'

@@ -22,6 +22,12 @@ ssh::sshd_config:
   UsePAM:
     ensure: present
     value:  'yes'
+  ChallengeResponseAuthentication:
+    ensure: present
+    value:  'no'
+  PasswordAuthentication:
+    ensure: present
+    value:  'no'
 
 base::admin_user::username: 'pete'
 base::admin_user::password: '$6$hqsk3YNP$7CiQ2RJ6MbUV5PlLdBRCE9oYDJjBGm6V3xJKi/638hKUdaE1lUSjpz2YCj.j9bJtt1oa.mMmDC5.p1QsSvfQB0'

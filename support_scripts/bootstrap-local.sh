@@ -7,11 +7,11 @@
 mkdir -vp /etc/facter/facts.d
 echo "hostgroup=local" > /etc/facter/facts.d/hostgroup.txt
 
-if [[ "$1" ]]; then
+if [ "$1" ]; then
     echo "role=$1" > /etc/facter/facts.d/role.txt
 fi
 
-if [[ `which yum` ]]; then
+if [ `which yum` ]; then
     yum -y install git
 else
     apt-get install git

@@ -15,4 +15,10 @@ base::files:
   '/etc/update-motd.d/10-help-text':
     ensure: 'absent'
 
+base::services:
+  puppet: {
+    ensure: 'stopped',
+    enable: false,
+  }
+
 base::sudo_env_keep: true

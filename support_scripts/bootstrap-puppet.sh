@@ -25,6 +25,7 @@ if [ `which puppet` ]; then
     puppet module install herculesteam-augeasproviders_shellvar
     puppet module install herculesteam-augeasproviders_pam
     puppet module install herculesteam-augeasproviders_puppet
+    puppet apply /etc/puppet/manifests/site.pp
 else
     echo "Could not install puppet modules"
     exit 1

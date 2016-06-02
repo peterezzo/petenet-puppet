@@ -1,7 +1,7 @@
 #!/bin/sh
 
-# This script will bootstrap the puppet install on a cloud node so it's not all in userdata
-# it does a hacky detection based on distro /etc files
+# This script will bootstrap the puppet install on a cloud node for standalone puppet
+# it does a hacky detection based on distro /etc files but works so far
 # it also assumes that there will not be collisions of required files in /etc/puppet
 
 if [ -e /etc/redhat-release ]; then
@@ -27,6 +27,6 @@ if [ `which puppet` ]; then
     puppet module install herculesteam-augeasproviders_puppet
     puppet apply /etc/puppet/manifests/site.pp
 else
-    echo "Could not install puppet modules"
+    echo "Could not setup puppet"
     exit 1
 fi

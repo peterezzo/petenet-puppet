@@ -28,7 +28,10 @@ ssh::sshd_config:
   PasswordAuthentication:
     ensure: present
     value:  'no'
+  PermitRootLogin:
+    ensure: present
+    value:  'no'
 
 base::admin_user::username: 'pete'
-base::admin_user::password: '$6$hqsk3YNP$7CiQ2RJ6MbUV5PlLdBRCE9oYDJjBGm6V3xJKi/638hKUdaE1lUSjpz2YCj.j9bJtt1oa.mMmDC5.p1QsSvfQB0'
-base::admin_user::ssh-key: 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCGTAkFHoRHlOpTaqftVosB/gxFTDfZVpERW1c/dTPybJO18WDLylL6vvkgPof0i9Dnho2ukjYgESPLMs6MJW3pAs7jXzgoKAJpwYCjCe254u/uwTljn1RK1W00rWNkMgpa7nRsKV/l/NAWohb1pj52PaHVZTZgJuuvOhjuVVcHn5dYgJNxTJpxEh6vJwETphQvYR0ltXldJ79a/5e/+ReFU3oTbooI9jmxC8uzDPh8By1xJKpjrfoMJ+zRPFJl+fTR5cdaSSk8oOrQCsmJdOgEds4xF/ZqMXXgQvspgCRnnK3Lugc2xxUYmOvpY9M8bHn1MLNbRHtsXfMO+ztk0At5'
+base::admin_user::ssh-key-type: 'ssh-ed25519'
+base::admin_user::ssh-key: 'AAAAC3NzaC1lZDI1NTE5AAAAIGLYvPwjRulWcBNC5TYkrEkH9ZYZ1o7wHmnDmizZv0T/'

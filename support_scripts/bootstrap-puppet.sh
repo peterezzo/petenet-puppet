@@ -11,6 +11,9 @@ if [ -e /etc/redhat-release ]; then
     yes | yum -y install puppet
 elif [ -e /etc/debian_version ]; then
     echo "Debian detected"
+    wget http://apt.puppetlabs.com/puppetlabs-release-trusty.deb
+    dpkg -i /puppetlabs-release-trusty.deb
+    apt-get -y update
     apt-get -y install puppet
 else
     echo "Unsupported release detected"

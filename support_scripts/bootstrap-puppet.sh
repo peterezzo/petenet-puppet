@@ -11,6 +11,7 @@ if [ -e /etc/redhat-release ]; then
     yes | yum -y install puppet
 elif [ -e /etc/debian_version ]; then
     echo "Debian detected"
+    # only support 14.04 for now
     wget http://apt.puppetlabs.com/puppetlabs-release-trusty.deb
     dpkg -i /puppetlabs-release-trusty.deb
     apt-get -y update

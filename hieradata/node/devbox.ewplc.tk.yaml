@@ -1,0 +1,9 @@
+---
+metadata:hostname: 'devbox'
+metadata:role: 'devbox'
+metadata:provider: 'aws'
+# Centos7 ImageId = ami-6d1c2007
+# RHEL ImageId = ami-2051294a   # also needs t2.micro or higher
+# Ubuntu 14.04 ImageID = ami-fce3c696
+#metadata:aws:ami: 'ami-2051294a'
+#metadata:aws:type: 't2.micro'

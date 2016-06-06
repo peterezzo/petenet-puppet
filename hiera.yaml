@@ -4,9 +4,9 @@
 :yaml:
     :datadir: /etc/puppet/hieradata
 :hierarchy:
-    - "node/%{::fqdn}"
-    - "role/%{::role}"
-    - "hostgroup/%{::hostgroup}"
-    - "os/%{::operatingsystem}"
-    - "virtual/%{::virtual}"
+    - "node/%{fqdn}"
+    - "role/%{role}"
+    - "hostgroup/%{hostgroup}"
+    - "os/%{operatingsystem}"
+    - "virtual/%{virtual}"
     - common

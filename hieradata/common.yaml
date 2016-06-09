@@ -9,6 +9,7 @@ metadata:aws:keypair: 'macbook'
 # Ubuntu 14.04 ImageID = ami-fce3c696
 metadata:aws:ami: 'ami-6d1c2007'
 metadata:aws:type: 't2.nano'
+metadata:aws:region: 'us-east-1'
 
 classes:
   - ntp

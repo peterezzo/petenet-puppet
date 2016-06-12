@@ -1,6 +1,8 @@
 ---
 metadata:domain: 'ewplc.tk'
 metadata:repo: 'https://github.com/peterezzo/petenet-puppet.git'
+metadata:provider: 'aws'
+metadata:aws:region: 'us-east-1'
 metadata:aws:subnet: 'subnet-2fd98359'
 metadata:aws:secgroup: 'sg-c7cc19bc'
 metadata:aws:keypair: 'macbook'
@@ -9,7 +11,6 @@ metadata:aws:keypair: 'macbook'
 # Ubuntu 14.04 ImageID = ami-fce3c696
 metadata:aws:ami: 'ami-6d1c2007'
 metadata:aws:type: 't2.nano'
-metadata:aws:region: 'us-east-1'
 
 classes:
   - ntp

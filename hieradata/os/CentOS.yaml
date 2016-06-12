@@ -1,5 +1,6 @@
 ---
 base::packages:
   vim-enhanced: {}
+  epel-release: {}
 
 base::sudo_env_keep: true

@@ -8,6 +8,7 @@ base::packages:
 
 classes:
   - git
+  - devbox
 
 git::configs:
   user.name:

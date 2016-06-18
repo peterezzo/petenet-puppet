@@ -16,6 +16,8 @@ else
     elif [ -e /etc/debian_version ]; then
         echo "Debian detected"
         # only support 14.04 for now
+        apt-get -y install wget
+        # TODO: this needs a lot more robust verification that download happened!
         wget http://apt.puppetlabs.com/puppetlabs-release-trusty.deb
         dpkg -i /puppetlabs-release-trusty.deb
         apt-get -y update

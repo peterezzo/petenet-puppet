@@ -1,0 +1,2 @@
+---
+base::cron_puppet_apply: true

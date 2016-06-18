@@ -4,7 +4,7 @@
 # it does a hacky detection based on distro /etc files but works so far
 # it also assumes that there will not be collisions of required files in /etc/puppet
 
-if [ `which puppet` ]' then:
+if [ `which puppet` ]; then:
     # maybe do some version checking here?
     echo "Skipping puppet reinstall"
 else

@@ -1,2 +1,7 @@
 ---
 base::cron_puppet_apply: true
+
+packages:
+  - linux-firmware
+  - firmware-b43-installer
+  - wpasupplicant

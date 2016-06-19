@@ -3,5 +3,5 @@ base::cron_puppet_apply: true
 
 base::packages:
   linux-firmware: {}
-  firmware-b43-installer: {}
+  rfkill: {}
   wpasupplicant: {}

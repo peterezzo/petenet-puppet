@@ -15,6 +15,7 @@ metadata:aws:type: 't2.nano'
 classes:
   - ntp
   - ssh
+  - git
   - base
   - base::admin_user
 
@@ -48,3 +49,11 @@ ssh::sshd_config:
 base::admin_user::username: 'pete'
 base::admin_user::ssh-key-type: 'ssh-ed25519'
 base::admin_user::ssh-key: 'AAAAC3NzaC1lZDI1NTE5AAAAIGLYvPwjRulWcBNC5TYkrEkH9ZYZ1o7wHmnDmizZv0T/'
+
+git::configs:
+  user.name:
+    value: 'Pete Ezzo'
+  user.email:
+    value: 'peter.ezzo@gmail.com'
+  push.default:
+    value: 'simple'

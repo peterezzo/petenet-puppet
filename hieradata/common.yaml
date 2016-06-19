@@ -17,13 +17,15 @@ classes:
   - ssh
   - git
   - base
-  - base::admin_user
 
 base::packages:
   puppet: {}
   screen: {}
   traceroute: {}
   mtr: {}
+
+base::create_admin_user: true
+base::sudo_env_keep: true
 
 ntp::servers:
   - time.apple.com

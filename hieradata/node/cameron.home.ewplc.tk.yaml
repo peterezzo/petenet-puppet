@@ -1,4 +1,7 @@
 ---
+metadata:hostname: 'cameron'
+metadata:role: 'mediaplayer'
+
 base::cron_puppet_apply: true
 
 base::packages:

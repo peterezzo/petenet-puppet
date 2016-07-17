@@ -1,16 +1,16 @@
 ---
-metadata:domain: 'ewplc.tk'
-metadata:repo: 'https://github.com/peterezzo/petenet-puppet.git'
-metadata:provider: 'aws'
-metadata:aws:region: 'us-east-1'
-metadata:aws:subnet: 'subnet-2fd98359'
-metadata:aws:secgroup: 'sg-c7cc19bc'
-metadata:aws:keypair: 'macbook'
+metadata:domain: ewplc.tk
+metadata:repo: https://github.com/peterezzo/petenet-puppet.git
+metadata:provider: aws
+metadata:aws:region: us-east-1
+metadata:aws:subnet: subnet-2fd98359
+metadata:aws:secgroup: sg-c7cc19bc
+metadata:aws:keypair: macbook
 # Centos7 ImageId = ami-6d1c2007
 # RHEL ImageId = ami-2051294a   # also needs t2.micro or higher
 # Ubuntu 14.04 ImageID = ami-fce3c696
-metadata:aws:ami: 'ami-6d1c2007'
-metadata:aws:type: 't2.nano'
+metadata:aws:ami: ami-6d1c2007
+metadata:aws:type: t2.nano
 
 classes:
   - ntp
@@ -48,14 +48,14 @@ ssh::sshd_config:
     ensure: present
     value:  'no'
 
-base::admin_user::username: 'pete'
-base::admin_user::ssh-key-type: 'ssh-ed25519'
-base::admin_user::ssh-key: 'AAAAC3NzaC1lZDI1NTE5AAAAIGLYvPwjRulWcBNC5TYkrEkH9ZYZ1o7wHmnDmizZv0T/'
+base::admin_user::username: pete
+base::admin_user::ssh-key-type: ssh-ed25519
+base::admin_user::ssh-key: AAAAC3NzaC1lZDI1NTE5AAAAIGLYvPwjRulWcBNC5TYkrEkH9ZYZ1o7wHmnDmizZv0T/
 
 git::configs:
   user.name:
-    value: 'Pete Ezzo'
+    value: Pete Ezzo
   user.email:
-    value: 'peter.ezzo@gmail.com'
+    value: peter.ezzo@gmail.com
   push.default:
-    value: 'simple'
+    value: simple

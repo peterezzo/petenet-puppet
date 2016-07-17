@@ -1,6 +1,6 @@
 ---
-metadata:hostname: 'cameron'
-metadata:role: 'mediaplayer'
+metadata:hostname: cameron
+metadata:role: steam_machine
 
 base::cron_puppet_apply: true
 

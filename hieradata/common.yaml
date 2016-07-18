@@ -48,9 +48,9 @@ ssh::sshd_config:
     ensure: present
     value:  'no'
 
-base::admin_user::username: pete
-base::admin_user::ssh-key-type: ssh-ed25519
-base::admin_user::ssh-key: AAAAC3NzaC1lZDI1NTE5AAAAIGLYvPwjRulWcBNC5TYkrEkH9ZYZ1o7wHmnDmizZv0T/
+admin_user::username: pete
+admin_user::ssh-key-type: ssh-ed25519
+admin_user::ssh-key: AAAAC3NzaC1lZDI1NTE5AAAAIGLYvPwjRulWcBNC5TYkrEkH9ZYZ1o7wHmnDmizZv0T/
 
 git::configs:
   user.name:

@@ -7,4 +7,4 @@ base::packages:
   }
 
 classes:
-  - devbox
+  - devtools

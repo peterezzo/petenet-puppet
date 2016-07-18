@@ -25,7 +25,7 @@ base::packages:
   mtr: {}
 
 base::create_admin_user: true
-base::sudo_env_keep: true
+base::apply_os_tweaks: true
 
 ntp::servers:
   - time.apple.com

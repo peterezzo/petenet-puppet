@@ -1,0 +1,8 @@
+---
+ssh::sshd_config:
+  ChallengeResponseAuthentication:
+    ensure: present
+    value:  'no'
+  PasswordAuthentication:
+    ensure: present
+    value:  'no'

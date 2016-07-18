@@ -1,5 +1,14 @@
 etckeeper-commit-post
 etckeeper-commit-pre
 **/.idea
-auth.conf
-puppet.conf
+/auth.conf
+/puppet.conf
+/*conf.default
+/environments/example_env
+/modules/concat
+/modules/stdlib
+/modules/rsyslog
+/modules/augeasproviders_*
+/modules/apt
+/modules/ntp
+/modules/network

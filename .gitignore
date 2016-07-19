@@ -12,3 +12,4 @@ etckeeper-commit-pre
 /modules/apt
 /modules/ntp
 /modules/network
+/modules/git

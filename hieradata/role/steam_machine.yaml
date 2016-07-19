@@ -1,4 +1,4 @@
 ---
 base::packages:
-  lxde-core: {}
+  lxde: {}
   lxterminal: {}

@@ -4,7 +4,23 @@ metadata:role: steam_machine
 
 base::cron_puppet_apply: true
 
+admin_user::password: '$6$Ae04j8NX$67zhBc3JJeizRccVkYPpmVXbKwwcD9ZbaWCBLROrd/iS9zgtrtNXYVeA2FY.xybBEyED1a0lc.w78GHQpQQ6K0'
+
 base::packages:
   linux-firmware: {}
   rfkill: {}
   wpasupplicant: {}
+  xserver-xorg-video-ati: {}
+
+base::shellvars:
+  kernel_parameters:
+   ensure: present
+   target: /etc/default/grub
+   variable: GRUB_CMDLINE_LINUX_DEFAULT
+   value: usb-storage.delay_use=1 rootdelay=10 radeon.dpm=1
+
+base::execs:
+  update_grub:
+    command: /usr/sbin/update-grub
+    subscribe: Shellvar[kernel_parameters]
+

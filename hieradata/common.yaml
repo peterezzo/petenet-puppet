@@ -1,6 +1,7 @@
 ---
 metadata:domain: ewplc.tk
 metadata:repo: https://github.com/peterezzo/petenet-puppet.git
+metadata:hostgroup: home
 metadata:provider: aws
 metadata:aws:region: us-east-1
 metadata:aws:subnet: subnet-2fd98359
@@ -26,6 +27,10 @@ base::packages:
 
 base::create_admin_user: true
 base::apply_os_tweaks: true
+base::create_metadata_facts: true
+base::metadata::facts:
+  - role
+  - hostgroup
 
 ntp::servers:
   - time.apple.com

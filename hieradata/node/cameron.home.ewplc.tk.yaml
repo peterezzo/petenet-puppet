@@ -4,23 +4,35 @@ metadata:role: steam_machine
 
 base::cron_puppet_apply: true
 
-admin_user::password: '$6$Ae04j8NX$67zhBc3JJeizRccVkYPpmVXbKwwcD9ZbaWCBLROrd/iS9zgtrtNXYVeA2FY.xybBEyED1a0lc.w78GHQpQQ6K0'
-
 base::packages:
+  linux-generic-lts-trusty: {}
   linux-firmware: {}
   rfkill: {}
   wpasupplicant: {}
-  xserver-xorg-video-ati: {}
+  fglrx-updates:
+    ensure: latest
+  xvba-va-driver: {}
+  libva-glx1: {}
+  libva-egl1: {}
+  vainfo: {}
+#  xserver-xorg-video-ati: {}
 
 base::shellvars:
   kernel_parameters:
    ensure: present
    target: /etc/default/grub
    variable: GRUB_CMDLINE_LINUX_DEFAULT
-   value: usb-storage.delay_use=1 rootdelay=10 radeon.dpm=1
+   value: usb-storage.delay_use=1 rootdelay=10
+#   value: usb-storage.delay_use=1 rootdelay=10 radeon.dpm=1 radeon.audio=1
+
+base::files:
+  default_grub:
+    path: /etc/default/grub
+    audit: content
 
 base::execs:
   update_grub:
     command: /usr/sbin/update-grub
-    subscribe: Shellvar[kernel_parameters]
+    subscribe: File[default_grub]
+    refreshonly: true
 

@@ -1,4 +1,26 @@
 ---
+classes:
+  - lxde
+
 base::packages:
-  lxde: {}
-  lxterminal: {}
+  steam-launcher: {}
+  xpad: {}
+  ntfs-3g: {}
+  pulseaudio: {}
+  pavucontrol: {}
+  gnome-media: {}
+  avahi-utils: {}
+
+apt::sources:
+  steam:
+    location:  http://repo.steampowered.com/steam/
+    repos: steam
+    release: precise
+    key:
+      id: BA1816EF8E75005FCF5E27A1F24AEA9FB05498B7
+      source: http://repo.steampowered.com/steam/signature.gpg
+
+lxde::kiosk_mode: 'true'
+lxde::kiosk_user:  "%{hiera('admin_user::username')}"
+lxde::kiosk_app: steam steam://open/bigpicture
+

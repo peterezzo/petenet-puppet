@@ -8,5 +8,4 @@
   - "role/%{role}"
   - "hostgroup/%{hostgroup}"
   - "os/%{osfamily}"
-  - "virtual/%{virtual}"
   - common

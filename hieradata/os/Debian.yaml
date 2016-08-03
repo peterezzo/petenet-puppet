@@ -32,3 +32,14 @@ base::services:
     ensure: stopped,
     enable: 'false'
   }
+
+base::files:
+  default_grub:
+    path: /etc/default/grub
+    audit: content
+
+base::execs:
+  update_grub:
+    command: /usr/sbin/update-grub
+    subscribe: File[default_grub]
+    refreshonly: true

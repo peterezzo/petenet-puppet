@@ -1,5 +1,6 @@
 ---
 metadata:hostname: cameron
+metadata:hostgroup: home
 metadata:role: steam_machine
 
 base::cron_puppet_apply: true
@@ -25,14 +26,4 @@ base::shellvars:
    value: usb-storage.delay_use=1 rootdelay=10
 #   value: usb-storage.delay_use=1 rootdelay=10 radeon.dpm=1 radeon.audio=1
 
-base::files:
-  default_grub:
-    path: /etc/default/grub
-    audit: content
-
-base::execs:
-  update_grub:
-    command: /usr/sbin/update-grub
-    subscribe: File[default_grub]
-    refreshonly: true
 

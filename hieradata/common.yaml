@@ -1,8 +1,8 @@
 ---
 metadata:domain: ewplc.tk
 metadata:repo: https://github.com/peterezzo/petenet-puppet.git
-metadata:hostgroup: home
 metadata:provider: aws
+metadata:hostgroup: "%{hiera('metadata:provider')}"
 metadata:aws:region: us-east-1
 metadata:aws:subnet: subnet-2fd98359
 metadata:aws:secgroup: sg-c7cc19bc
@@ -18,12 +18,19 @@ classes:
   - ssh
   - git
   - base
+  - network
+  - puppetconf
+  - admin_user
+  - vmtools
 
 base::packages:
   puppet: {}
   screen: {}
   traceroute: {}
   mtr: {}
+  librarian-puppet: {
+    provider: gem
+  }
 
 base::create_admin_user: true
 base::apply_os_tweaks: true
@@ -64,3 +71,7 @@ git::configs:
     value: peter.ezzo@gmail.com
   push.default:
     value: simple
+    scope: system
+  pull.rebase:
+    value: 'true'
+    scope: system

@@ -8,7 +8,7 @@ network::hostname: vmrouter
 network::interfaces_hash:
   eth0_ipv4:
     interface: eth0
-    enable_dhcp: 'true'
+    enable_dhcp: true
   eth1_ipv4:
     interface: eth1
     ipaddress: '192.168.122.1'

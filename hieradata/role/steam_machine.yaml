@@ -20,7 +20,6 @@ apt::sources:
       id: BA1816EF8E75005FCF5E27A1F24AEA9FB05498B7
       source: http://repo.steampowered.com/steam/signature.gpg
 
-lxde::kiosk_mode: 'true'
+lxde::kiosk_mode: true
 lxde::kiosk_user:  "%{hiera('admin_user::username')}"
 lxde::kiosk_app: steam steam://open/bigpicture
-

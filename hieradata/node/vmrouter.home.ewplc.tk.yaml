@@ -4,6 +4,8 @@ metadata:hostgroup: home
 metadata:role: router
 metadata:os: Centos7
 
+base::cron_puppet_apply: true
+
 network::hostname: vmrouter
 network::interfaces_hash:
   eth0_ipv4:

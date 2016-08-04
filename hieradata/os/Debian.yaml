@@ -28,10 +28,9 @@ base::shellvars:
     value: 'no'
 
 base::services:
-  puppet: {
-    ensure: stopped,
-    enable: 'false'
-  }
+  puppet:
+    ensure: stopped
+    enable: false
 
 base::files:
   default_grub:

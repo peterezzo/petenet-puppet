@@ -1,6 +1,7 @@
 ---
 classes:
   - apt
+  - unattended_upgrades
 
 apt::update:frequency: daily
 
@@ -12,8 +13,15 @@ apt::sources:
       id: 47B320EB4C7C375AA9DAE1A01054B7A24BD6EC30
       server: pgp.mit.edu
 
+unattended_upgrades::auto:
+  reboot: 'true'
+  remove: 'true'
+unattended_upgrades::origins:
+  - '${distro_id} ${distro_codename}-security'
+
 base::packages:
   apt-transport-https: {}
+  update-notifier-common: {}
   vim: {}
   resolvconf:
     ensure: purged

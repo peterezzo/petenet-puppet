@@ -19,6 +19,7 @@ base::packages:
     ensure: purged
   popularity-contest:
     ensure: purged
+  avahi-daemon: {}
 
 base::shellvars:
   puppet_at_boot:
@@ -31,6 +32,9 @@ base::services:
   puppet:
     ensure: stopped
     enable: false
+  avahi-daemon:
+    ensure: running
+    enable: true
 
 base::files:
   default_grub:

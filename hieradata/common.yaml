@@ -24,7 +24,8 @@ classes:
   - vmtools
 
 base::packages:
-  puppet: {}
+  puppet:
+    ensure: latest
   screen: {}
   traceroute: {}
   mtr: {}
@@ -32,9 +33,7 @@ base::packages:
     provider: gem
   }
 
-base::create_admin_user: true
 base::apply_os_tweaks: true
-base::create_metadata_facts: true
 base::metadata::facts:
   - role
   - hostgroup

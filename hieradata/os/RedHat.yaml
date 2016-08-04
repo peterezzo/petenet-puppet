@@ -2,3 +2,11 @@
 base::packages:
   vim-enhanced: {}
   epel-release: {}
+
+base::packages:
+  avahi: {}
+
+base::services:
+  avahi-daemon:
+      ensure: running
+      enable: true

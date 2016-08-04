@@ -33,6 +33,12 @@ base::packages:
     provider: gem
   }
 
+base::services:
+  puppet_agent:
+    ensure: stopped
+    name: puppet
+    enable: false
+
 base::apply_os_tweaks: true
 base::metadata::facts:
   - role

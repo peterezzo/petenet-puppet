@@ -37,9 +37,6 @@ base::shellvars:
     value: 'no'
 
 base::services:
-  puppet:
-    ensure: stopped
-    enable: false
   avahi-daemon:
     ensure: running
     enable: true

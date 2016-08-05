@@ -2,8 +2,7 @@
 base::packages:
   vim-enhanced: {}
   epel-release: {}
-
-base::packages:
+  bind-utils: {}
   avahi: {}
 
 base::services:

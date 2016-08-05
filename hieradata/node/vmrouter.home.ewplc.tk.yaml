@@ -4,20 +4,26 @@ metadata:hostgroup: home
 metadata:role: router
 metadata:os: Centos7
 
+classes:
+  - dns
+
 base::cron_puppet_apply: true
 
 network::hostname: vmrouter
 network::interfaces_hash:
   eth0_ipv4:
     interface: eth0
-    enable_dhcp: true
+    ipaddress: 10.0.0.40
+    netmask: '24'
+    ipv6init: 'yes'
+    gateway: 10.0.0.1
   eth1_ipv4:
     interface: eth1
-    ipaddress: '192.168.122.1'
+    ipaddress: 192.168.122.1
     netmask: '24'
     ipv6init: 'yes'
   eth2_ipv4:
     interface: eth2
-    ipaddress: '192.168.100.1'
+    ipaddress: 192.168.100.1
     netmask: '24'
     ipv6init: 'yes'

@@ -80,3 +80,6 @@ git::configs:
   pull.rebase:
     value: 'true'
     scope: system
+
+dns::domains:
+  - "%{hiera('metadata:domain')}"

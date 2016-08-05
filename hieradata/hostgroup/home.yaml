@@ -1,2 +1,5 @@
 ---
 metadata:domain: home.ewplc.tk
+
+dns::nameservers:
+  - 10.0.0.1

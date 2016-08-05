@@ -8,5 +8,6 @@ base::packages:
 
 base::services:
   avahi-daemon:
-      ensure: running
-      enable: true
+    ensure: running
+    enable: true
+    require: Package[avahi]

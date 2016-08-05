@@ -81,5 +81,3 @@ git::configs:
     value: 'true'
     scope: system
 
-dns::domains:
-  - "%{hiera('metadata:domain')}"

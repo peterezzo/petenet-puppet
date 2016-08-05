@@ -6,3 +6,6 @@ ssh::sshd_config:
   PasswordAuthentication:
     ensure: present
     value:  'no'
+
+dns::domains:
+  - ewplc.tk

@@ -4,6 +4,7 @@ base::packages:
   epel-release: {}
   bind-utils: {}
   avahi: {}
+  tcpdump: {}
 
 base::services:
   avahi-daemon:

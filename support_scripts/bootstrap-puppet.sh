@@ -28,7 +28,7 @@ fi
 gem install librarian-puppet
 if [ `which librarian-puppet` ]; then
     cd ${PUPPETDIR}
-    librarian-puppet update
+    librarian-puppet update --verbose
 else
     echo "Could not setup librarian-puppet"
     exit 1
